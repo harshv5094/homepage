@@ -1,4 +1,5 @@
 'use client'
+import Layout from '@/components/layout/article'
 import Main from '@/components/layout/main'
 import { useEffect } from 'react'
 
@@ -8,7 +9,9 @@ function ContactMe() {
   }, [])
   return (
     <Main>
-      <h1>This is contact me page</h1>
+      <Layout>
+        <h1>This is contact me page</h1>
+      </Layout>
     </Main>
   )
 }

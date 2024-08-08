@@ -40,7 +40,13 @@ const MenuLink = forwardRef((props, ref) => <Link ref={ref} {...props} />)
 const Navbar = props => {
   const { path } = props
   return (
-    <Box as="nav" position={'fixed'} w={'full'} zIndex={2}>
+    <Box
+      as="nav"
+      position={'fixed'}
+      w={'full'}
+      css={{ backdropFilter: 'blur(10px)' }}
+      zIndex={2}
+    >
       <Container display={'flex'} p={2} maxW="container.xl">
         <Flex align="center" mr={5}>
           <Heading as={'h1'} size={'lg'}>

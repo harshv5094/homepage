@@ -25,6 +25,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       href={href}
       scroll={false}
       p={2}
+      _hover={{
+        bg: 'dodgerblue',
+        color: useColorModeValue('white', 'black')
+      }}
       bg={active ? 'dodgerblue' : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}

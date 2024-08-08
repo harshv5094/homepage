@@ -17,7 +17,9 @@ import { Link } from '@chakra-ui/next-js'
 import { forwardRef } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
-const LinkItem = ({ href, target, children, ...props }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (
     <Link
       href={href}
@@ -27,10 +29,8 @@ const LinkItem = ({ href, target, children, ...props }) => {
         bg: 'dodgerblue',
         color: useColorModeValue('white', 'black')
       }}
-      _activeLink={{
-        bg: 'dodgerblue',
-        color: useColorModeValue('white', 'black')
-      }}
+      bg={active ? 'dodgerblue' : undefined}
+      color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
     >
@@ -41,7 +41,8 @@ const LinkItem = ({ href, target, children, ...props }) => {
 
 const MenuLink = forwardRef((props, ref) => <Link ref={ref} {...props} />)
 
-const Navbar = () => {
+const Navbar = props => {
+  const { path } = props
   return (
     <Box
       as="nav"
@@ -51,14 +52,12 @@ const Navbar = () => {
       zIndex={2}
     >
       <Container display={'flex'} p={2} maxW="container.xl">
-        {/*NOTE: Left Side of Navbar*/}
         <Flex align="center" mr={5}>
           <Heading as={'h1'} size={'lg'}>
             <Logo />
           </Heading>
         </Flex>
 
-        {/*NOTE: Center Side of Navbar*/}
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
@@ -67,10 +66,11 @@ const Navbar = () => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href={'/projects'}>Projects</LinkItem>
+          <LinkItem href={'/projects'} path={path}>
+            Projects
+          </LinkItem>
         </Stack>
 
-        {/*NOTE: Right Side of Navbar*/}
         <Box flex={1} align="right">
           <ThemeToggleButton />
 

@@ -16,7 +16,11 @@ const Logo = () => {
   return (
     <Link href={'/'} scroll={false}>
       <LogoBox>
-        <Text fontFamily={'Noto Serif, sans-serif'} fontWeight={'bold'} ml={3}>
+        <Text
+          fontFamily={'Noto Serif, sans-serif'}
+          fontWeight={'bold'}
+          ml={{ base: 0, sm: 3, md: 3 }}
+        >
           Harsh Vyapari
         </Text>
       </LogoBox>

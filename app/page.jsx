@@ -17,16 +17,13 @@ function Home() {
             align={{ base: 'center', md: 'left' }}
             order={{ base: 2, md: 1 }}
           >
-            <Heading
-              mt={{ md: '0.5em' }}
-              as={'h1'}
-              fontSize={{ base: '2em', md: '4.2em' }}
-              lineHeight={{ md: 'sm' }}
-            >
-              Hi! I&apos;m a developer based in India
-            </Heading>
-          </GridBoxItem>
-          <GridBoxItem align={'center'} order={{ base: 1, md: 2 }}>
+            <Box mt={{ md: '8em' }} textAlign={'center'}>
+              <Box as="span">Hello, I&apos;m</Box>
+              <Heading as={'h1'} fontSize={{ base: '2em', md: '4.2em' }}>
+                Harsh Vyapari
+              </Heading>
+              <Box as="span">A developer based on India</Box>
+            </Box>
           </GridItem>
           <GridItem align={'center'} order={{ base: 1, md: 2 }}>
             <Image

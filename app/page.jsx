@@ -9,7 +9,11 @@ function Home() {
   return (
     <Layout>
       <Box as="section" mt={{ base: 5, md: 14 }}>
-        <GridBox gap={{ base: 4, md: 0 }}>
+        <GridBox
+          templateRows={{ base: 'repeat(2, 0.1fr)', md: 'none' }}
+          templateColumns={{ base: 'none', md: 'repeat(2, 1fr)' }}
+          gap={{ base: 4, md: 0 }}
+        >
           <GridBoxItem
             align={{ base: 'center', md: 'left' }}
             order={{ base: 2, md: 1 }}

@@ -18,11 +18,11 @@ function Home() {
             order={{ base: 2, md: 1 }}
           >
             <Box mt={{ md: '8em' }} textAlign={'center'}>
-              <Box as="span">Hello, I&apos;m</Box>
+              <Box as="p">Hello, I&apos;m</Box>
               <Heading as={'h1'} fontSize={{ base: '2em', md: '4.2em' }}>
                 Harsh Vyapari
               </Heading>
-              <Box as="span">A developer based on India</Box>
+              <Box as="p">A developer based in India</Box>
             </Box>
           </GridItem>
           <GridItem align={'center'} order={{ base: 1, md: 2 }}>

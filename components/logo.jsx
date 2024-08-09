@@ -14,7 +14,7 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   return (
-    <Link href={'/'} scroll={false}>
+    <Link href={'/'}>
       <LogoBox>
         <Text
           fontFamily={'Noto Serif, sans-serif'}

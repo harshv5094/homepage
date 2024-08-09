@@ -30,7 +30,6 @@ const LinkItem = ({ href, children, ...props }) => {
   return (
     <Link
       href={href}
-      scroll={false}
       p={2}
       _hover={{
         bg: 'dodgerblue',

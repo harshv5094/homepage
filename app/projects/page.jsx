@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 function Projects() {
   useEffect(() => {
-    document.title = 'Harsh Vyapari - Projects'
+    document.title = 'Projects - Harsh Vyapari'
   }, [])
   return (
     <Layout>

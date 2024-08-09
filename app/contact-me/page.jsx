@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 function ContactMe() {
   useEffect(() => {
-    document.title = 'Harsh Vyapari - Contact Me'
+    document.title = 'Contact Me - Harsh Vyapari'
   }, [])
   return (
     <Layout>

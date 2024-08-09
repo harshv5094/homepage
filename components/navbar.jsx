@@ -17,6 +17,7 @@ import { Link } from '@chakra-ui/next-js'
 import { forwardRef } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 const LinkItem = ({ href, children, ...props }) => {
   // HACK: usePathname for getting current router path
@@ -31,15 +32,16 @@ const LinkItem = ({ href, children, ...props }) => {
     <Link
       href={href}
       p={2}
-      _hover={{
-        bg: 'dodgerblue',
-        color: colorHook
-      }}
       bg={isActive && 'dodgerblue'}
       color={isActive && colorHook}
       {...props}
     >
-      {children}
+      <motion.button
+        whileHover={{ textDecoration: 'underline' }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {children}
+      </motion.button>
     </Link>
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 import Layout from '@/components/layout/article'
 import ProfilePic from '@/public/images/harsh.jpg'
-import PersonalInfo from '@/public/undraw_personal_info_re_ur1n.svg'
+import PersonalInfo from '@/public/personal-info.svg'
 import { Image } from '@chakra-ui/next-js'
 import { Box, Grid, GridItem, Heading } from '@chakra-ui/react'
 

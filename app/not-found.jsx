@@ -1,6 +1,6 @@
 'use client'
 import { Box, Button, Container, Divider, Heading } from '@chakra-ui/react'
-import PageNotFound from '@/public/undraw_not_found_re_bh2e.svg'
+import PageNotFound from '@/public/not-found.svg'
 import { useEffect } from 'react'
 import { Image } from '@chakra-ui/next-js'
 import { IoMdHome } from 'react-icons/io'

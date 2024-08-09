@@ -13,25 +13,23 @@ function NotFound() {
     document.title = 'Not Found 😢'
   }, [])
   return (
-    <Main>
-      <Container align="center" maxW={'container.md'}>
-        <Image src={PageNotFound} boxSize={'sm'} alt="Page Not Found" />
-        <Heading as={'h1'} my={0} align="left">
-          Not Found
-        </Heading>
-        <Box align="left" mb={2}>
-          The page you are looking for, does not exist
-        </Box>
-        <Divider my={5} />
-        <Button
-          leftIcon={<IoMdHome />}
-          colorScheme={'blue'}
-          onClick={() => router.push('/')}
-        >
-          Return To Home
-        </Button>
-      </Container>
-    </Main>
+    <Container align="center" maxW={'container.md'}>
+      <Image src={PageNotFound} boxSize={'sm'} alt="Page Not Found" />
+      <Heading as={'h1'} my={0} align="left">
+        Not Found
+      </Heading>
+      <Box align="left" mb={2}>
+        The page you are looking for, does not exist
+      </Box>
+      <Divider my={5} />
+      <Button
+        leftIcon={<IoMdHome />}
+        colorScheme={'blue'}
+        onClick={() => router.push('/')}
+      >
+        Return To Home
+      </Button>
+    </Container>
   )
 }
 

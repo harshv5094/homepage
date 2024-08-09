@@ -1,3 +1,4 @@
+import Main from '@/components/layout/main'
 import Provider from '@/components/provider'
 import fonts from '@/lib/fonts.mjs'
 
@@ -13,7 +14,9 @@ function RootLayout({ children }) {
       className={`${fonts.inter.className} ${fonts.notoSerif.className}`}
     >
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Main>{children}</Main>
+        </Provider>
       </body>
     </html>
   )

@@ -1,20 +1,19 @@
 'use client'
 import Layout from '@/components/layout/article'
-import { GridBox, GridBoxItem } from '@/components/layout/grid-box'
 import ProfilePic from '@/public/images/harsh.jpg'
 import { Image } from '@chakra-ui/next-js'
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Heading } from '@chakra-ui/react'
 
 function Home() {
   return (
     <Layout>
       <Box as="section" mt={{ base: 5, md: 14 }}>
-        <GridBox
+        <Grid
           templateRows={{ base: 'repeat(2, 0.1fr)', md: 'none' }}
           templateColumns={{ base: 'none', md: 'repeat(2, 1fr)' }}
           gap={{ base: 4, md: 0 }}
         >
-          <GridBoxItem
+          <GridItem
             align={{ base: 'center', md: 'left' }}
             order={{ base: 2, md: 1 }}
           >
@@ -28,6 +27,8 @@ function Home() {
             </Heading>
           </GridBoxItem>
           <GridBoxItem align={'center'} order={{ base: 1, md: 2 }}>
+          </GridItem>
+          <GridItem align={'center'} order={{ base: 1, md: 2 }}>
             <Image
               src={ProfilePic}
               borderRadius={'10px'}
@@ -36,8 +37,8 @@ function Home() {
               height={'28em'}
               alt="Image"
             />
-          </GridBoxItem>
-        </GridBox>
+          </GridItem>
+        </Grid>
       </Box>
     </Layout>
   )
